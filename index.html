@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>multitask agent — finance, made clear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#"><span class="brand-mark">m</span><span>multitask<br><b>agent</b></span></a>
+        <nav>
+          <p class="eyebrow">Workspace</p>
+          <a class="nav-item active" href="#dashboard"><span>▦</span> Overview</a>
+          <a class="nav-item" href="#tax-planner"><span>⌁</span> Tax planner</a>
+          <a class="nav-item" href="#budget"><span>◴</span> Budget & cashflow</a>
+          <a class="nav-item" href="#documents"><span>▤</span> Documents <i>3</i></a>
+          <p class="eyebrow space">Tools</p>
+          <a class="nav-item" href="#compliance"><span>✓</span> Compliance calendar</a>
+          <a class="nav-item" href="#invoices"><span>⊞</span> Invoices</a>
+        </nav>
+        <div class="sidebar-foot"><div class="secure-dot">✓</div><div><b>Your data is private</b><small>Encrypted & local to you</small></div></div>
+      </aside>
+      <main>
+        <header>
+          <div><p class="eyebrow">Tuesday, 23 September</p><h1>Good morning, Rohan <span>✦</span></h1></div>
+          <div class="header-actions"><button class="icon-btn" aria-label="Notifications">♧</button><button class="profile">RK</button></div>
+        </header>
+
+        <section class="hero" id="dashboard">
+          <div class="hero-copy"><span class="pill">FY 2025–26 <b>·</b> New regime</span><h2>Your money, <em>in focus.</em></h2><p>A calm, clear view of your finances and the next best action.</p><button class="primary" id="reviewButton">Review my tax plan <span>→</span></button></div>
+          <div class="hero-orbit"><div class="orbit-ring"></div><div class="orbit-card top">Tax health <b>Great</b></div><div class="orbit-card bottom">Potential savings <b>₹48,250</b></div><div class="hero-symbol">₹</div></div>
+        </section>
+
+        <section class="metrics" aria-label="Financial overview">
+          <article><div class="metric-label"><span class="metric-icon mint">↗</span>Net income <button class="more">•••</button></div><strong>₹12,84,000</strong><p class="positive">↑ 12.4% <span>vs last financial year</span></p></article>
+          <article><div class="metric-label"><span class="metric-icon lilac">◌</span>Estimated tax <button class="more">•••</button></div><strong id="estimatedTax">₹1,08,600</strong><p class="muted">Due by 31 Mar 2026</p></article>
+          <article><div class="metric-label"><span class="metric-icon amber">⌇</span>Tax saved <button class="more">•••</button></div><strong>₹48,250</strong><p class="positive">On track <span>for your goal</span></p></article>
+        </section>
+
+        <div class="content-grid">
+          <section class="card tax-card" id="tax-planner"><div class="card-heading"><div><p class="eyebrow">Your tax plan</p><h3>Make every rupee count</h3></div><button class="text-button" id="detailsButton">View details →</button></div><div class="progress-row"><div class="donut" id="donut"><span>72<small>%</small></span></div><div><b>You're 72% optimised</b><p>We've found 2 more ways to reduce your tax this year.</p><button class="inline-link" id="findSavings">Find savings <span>→</span></button></div></div><div class="tip"><span>✦</span><p><b>Smart move</b><br>Increase your NPS contribution by ₹20,000 to save an estimated ₹6,240.</p></div></section>
+          <section class="card cash-card" id="budget"><div class="card-heading"><div><p class="eyebrow">This month</p><h3>Cash flow</h3></div><select aria-label="Month"><option>September</option></select></div><div class="cash-amount"><strong>₹1,06,400</strong><span>available to spend</span></div><div class="bar-chart" aria-label="Monthly cash flow chart"><div class="bar" style="height:42%"></div><div class="bar" style="height:64%"></div><div class="bar" style="height:50%"></div><div class="bar" style="height:77%"></div><div class="bar current" style="height:90%"><i>₹1.06L</i></div><div class="bar" style="height:54%"></div><div class="bar" style="height:69%"></div></div><div class="chart-labels"><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span></div></section>
+        </div>
+
+        <section class="bottom-grid">
+          <section class="card action-card" id="compliance"><div class="card-heading"><div><p class="eyebrow">Up next</p><h3>Keep things moving</h3></div><button class="text-button">See all →</button></div><div class="task"><div class="task-icon blue">▤</div><div><b>Review advance tax</b><p>Due in 8 days · 15 October</p></div><button class="round-arrow">→</button></div><div class="task"><div class="task-icon pink">⌁</div><div><b>Upload investment proof</b><p>For your employer declaration</p></div><button class="round-arrow">→</button></div></section>
+          <section class="card export-card" id="documents"><div class="export-graphic"><span>↓</span></div><div><p class="eyebrow">Ready when you are</p><h3>Your financial snapshot</h3><p>A beautiful, shareable summary of your tax plan, cash flow and next steps.</p><button class="secondary" id="exportPdf">Export as PDF <span>↓</span></button></div></section>
+        </section>
+      </main>
+    </div>
+    <div class="modal-backdrop" id="modalBackdrop" hidden><div class="modal"><button class="modal-close" id="closeModal">×</button><span class="pill">Personalised opportunity</span><h2 id="modalTitle">Tax savings, simplified.</h2><p id="modalContent">Based on the information in your profile, investing ₹20,000 in NPS could lower your estimated tax by ₹6,240. Confirm eligibility with a qualified tax professional before acting.</p><button class="primary" id="modalAction">Got it <span>→</span></button></div></div>
+    <script src="/app.js"></script>
+  </body>
+</html>
